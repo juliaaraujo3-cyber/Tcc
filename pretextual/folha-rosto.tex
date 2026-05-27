@@ -1,0 +1,31 @@
+\begin{folhaderosto}
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+
+    {\ABNTEXchapterfont\bfseries\Large\imprimirtitulo}
+
+    \vspace*{\fill}
+
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+        \SingleSpacing
+        \imprimirpreambulo
+        \par
+        \vspace*{1cm}
+        {\imprimirorientadorRotulo~\imprimirorientador\par}
+        \abntex@ifnotempty{\imprimircoorientador}{%
+          {\imprimircoorientadorRotulo~\imprimircoorientador}%
+        }%
+      \end{minipage}%
+    }%
+
+    \vspace*{\fill}
+
+    {\large\imprimirlocal}
+
+    {\large\imprimirdata}
+  \end{center}
+\end{folhaderosto}

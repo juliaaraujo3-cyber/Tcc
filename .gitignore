@@ -1,0 +1,34 @@
+# Arquivos gerados pela compilação LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.loa
+*.lol
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.nlo
+*.nls
+
+# PDF gerado (mantenha se quiser versionar o PDF final)
+# main.pdf
+
+# Arquivos do editor
+*.swp
+*~
+.DS_Store
+Thumbs.db

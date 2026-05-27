@@ -1,0 +1,137 @@
+% ============================================================
+%  TCC – Universidade Federal de Lavras (UFLA)
+%  Curso de Medicina Veterinária
+%  Normas ABNT (NBR 14724:2011) via abnTeX2
+% ============================================================
+\documentclass[
+  12pt,
+  openright,
+  oneside,
+  a4paper,
+  brazil
+]{abntex2}
+
+% ── Codificação e idioma ─────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+
+% ── Fonte (Times New Roman) ──────────────────────────────────
+\usepackage{mathptmx}
+
+% ── Margens ABNT: sup 3cm, inf 2cm, esq 3cm, dir 2cm ────────
+\usepackage[
+  top=3cm,
+  bottom=2cm,
+  left=3cm,
+  right=2cm
+]{geometry}
+
+% ── Pacotes essenciais ───────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{csquotes}
+\usepackage{microtype}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+
+% ── Citações ABNT ────────────────────────────────────────────
+\usepackage[alf, abnt-emphasize=bf]{abntex2cite}
+
+% ── Configuração do hyperref ─────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue,
+  pdftitle={Título do TCC},
+  pdfauthor={Julia Araujo},
+  pdfsubject={TCC – Medicina Veterinária – UFLA}
+}
+
+% ── Caminho para figuras ─────────────────────────────────────
+\graphicspath{{figures/}}
+
+% ── Espaçamento ──────────────────────────────────────────────
+\OnehalfSpacing  % 1,5 para o texto
+
+% ── Informações do trabalho ──────────────────────────────────
+\titulo{Título do Trabalho de Conclusão de Curso}
+\autor{Julia Araujo}
+\local{Lavras -- MG}
+\data{2026}
+\instituicao{Universidade Federal de Lavras}
+\tipotrabalho{Trabalho de Conclusão de Curso}
+\preambulo{Trabalho de Conclusão de Curso apresentado à Universidade Federal
+  de Lavras, como parte das exigências do Curso de Medicina Veterinária,
+  para a obtenção do título de Bacharel.}
+\orientador{Prof. Dr. Nome do Orientador}
+% \coorientador{Prof. Dr. Nome do Coorientador}  % descomente se houver
+
+% ============================================================
+\begin{document}
+
+% ── Pré-textuais ─────────────────────────────────────────────
+\pretextual
+
+\include{pretextual/capa}
+\include{pretextual/folha-rosto}
+\include{pretextual/folha-aprovacao}
+\include{pretextual/dedicatoria}
+\include{pretextual/agradecimentos}
+\include{pretextual/epigrafe}
+\include{pretextual/resumo}
+\include{pretextual/abstract}
+
+% Listas automáticas
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% ── Textuais ─────────────────────────────────────────────────
+\textual
+
+\include{chapters/01-introducao}
+\include{chapters/02-revisao-literatura}
+\include{chapters/03-material-metodos}
+\include{chapters/04-resultados-discussao}
+\include{chapters/05-conclusao}
+
+% ── Pós-textuais ─────────────────────────────────────────────
+\postextual
+
+% Referências
+\bibliography{references}
+
+% Apêndices (descomente se necessário)
+% \begin{apendicesenv}
+%   \partapendices
+%   \chapter{Título do Apêndice A}
+% \end{apendicesenv}
+
+% Anexos (descomente se necessário)
+% \begin{anexosenv}
+%   \partanexos
+%   \chapter{Título do Anexo A}
+% \end{anexosenv}
+
+\end{document}
